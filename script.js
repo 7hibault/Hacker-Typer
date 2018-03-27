@@ -13,6 +13,14 @@ $(
 	}
 );
 
+// on touch on mobile, type stuff 
+$('#mobile')
+	.on({ 'touchstart' : function(){ 
+		var key = {key: 65}; // this is the 'A' key
+		Typer.addText(key);
+		} 
+	    });
+
 var Typer={
 	text: null,
 	accessCountimer:null,
